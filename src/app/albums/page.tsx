@@ -6,17 +6,18 @@ async function Albums() {
   const res = await url.json();
 
   return(
-    <main>
-      {res.map((album : any) =>(
-        <div>
+    <>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      {res.map((album:any) =>(
+        <>
           <div className="">
             <Link href={'/albums/${album.id'}>
               <span className="text-xl font-medium">&nbsp; {album.id} : &nbsp; ALBUMS</span> <br/>
             </Link>
           </div>
-        </div>
+        </>
       ))}
-    </main>
+    </>
   );
 }
 

@@ -7,6 +7,7 @@ async function Users() {
 
   return(
     <>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
       {res.map((use : any) =>(
         <>
           <div className="">

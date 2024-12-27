@@ -7,6 +7,7 @@ async function Photos() {
 
   return(
     <>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
       {response.map((pho:any)=>(
         <>
           <div className="">
@@ -22,3 +23,6 @@ async function Photos() {
 
 
 export default Photos;
+
+
+

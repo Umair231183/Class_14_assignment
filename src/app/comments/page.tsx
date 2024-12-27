@@ -6,17 +6,18 @@ async function Comments() {
   const res = await url.json();
 
   return(
-    <main>
+    <>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
       {res.map((com : any) =>(
-        <div>
+        <>
           <div className="">
             <Link href={'/comments/${com.id'}>
               <span className="text-xl font-medium">&nbsp; {com.id} : &nbsp; COMMENTS</span> <br/>
             </Link>
           </div>
-        </div>
+        </>
       ))}
-    </main>
+    </>
   );
 }
 

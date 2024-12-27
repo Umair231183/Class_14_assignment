@@ -6,17 +6,18 @@ async function Todos() {
   const res = await url.json();
 
   return(
-    <main>
+    <>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
       {res.map((todo : any) =>(
-        <div>
+        <>
           <div className="">
             <Link href={`/todos/${todo.id}`}>
               <span className="text-xl font-medium">&nbsp; {todo.id} : &nbsp; TODOS</span> <br/>
             </Link>
           </div>
-        </div>
+        </>
       ))}
-    </main>
+    </>
   );
 }
 
